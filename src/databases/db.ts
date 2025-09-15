@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import { Sequelize } from "sequelize";
 
-dotenv.config();
+//dotenv.config();
 
 const DB_URL = process.env.DATABASE_URL;
 
@@ -12,7 +12,7 @@ if (!DB_URL)
 const sequelize = new Sequelize(DB_URL, {
   dialect: "postgres",
   dialectOptions: {
-    ssl: false,
+    ssl: { rejectUnauthorized: false }, 
   },
   logging: console.log
 });
