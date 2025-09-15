@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    // Diretórios
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Node + ESM
+    "module": "NodeNext", // NodeNext para suportar import/export ESM
+    "moduleResolution": "NodeNext", // Resolve módulos como Node ESM
+    "target": "ES2022", // ES2022 é suficiente para Node 18+
+
+    // Tipos
+    "types": ["node"], // Tipagem do Node.js
+
+    // Saída e mapas
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Compatibilidade ESM
+    "esModuleInterop": true, // Import/export compatíveis com CJS e ESM
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": false,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    // Extra recomendado para Node ESM + ts-node
+    "resolveJsonModule": true, // permite importar .json diretamente
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
