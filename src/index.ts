@@ -7,7 +7,7 @@ import usersRouter from "./routes/users.js";
 import { setupSwagger } from "./swagger.js";
 
 
-//dotenv.config();
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
